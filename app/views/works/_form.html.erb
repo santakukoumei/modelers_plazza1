@@ -1,0 +1,30 @@
+<%= form_with model: work, local: true do |f|%>
+  <div class="field">
+    <%= f.label :title, "作品タイトル" %><br />
+    <%= f.text_field :title, id:"work_title" %>
+  </div>
+
+  <div class="weight-bold-text">
+    作品カテゴリー
+    <span class="indispensable">必須</span>
+  </div>
+  <%= f.collection_select(:category_id, Category.all, :id, :genre, {}, {class:"select-box", id:"work-category"}) %>
+
+  <div class="field">
+    <%= f.label :concept, "作品コンセプト" %><br />
+    <%= f.text_area :concept, class: :form__text, id:"work_concept" %>
+  </div>
+  <div class="field">
+    <%= f.label :explanation, "作品説明" %><br />
+    <%= f.text_area :explanation, class: :form__text, id:"work_explanation" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image, "作品の画像" %><br />
+    <%= f.file_field :image, id:"work_image" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "保存する", class: :form__btn  %>
+  </div>
+<% end %>
