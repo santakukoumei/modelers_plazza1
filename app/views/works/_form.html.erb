@@ -1,4 +1,5 @@
 <%= form_with model: work, local: true do |f|%>
+  <%= render 'devise/shared/error_messages', model: f.object %>
   <div class="field">
     <%= f.label :title, "作品タイトル" %><br />
     <%= f.text_field :title, id:"work_title" %>
