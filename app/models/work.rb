@@ -10,4 +10,8 @@ class Work < ApplicationRecord
   validates :concept, presence: true 
   validates :explanation, presence: true
   validates :image, presence: true
+
+  def was_attached?
+    self.image.attached?
+  end
 end
