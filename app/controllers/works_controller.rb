@@ -19,6 +19,11 @@ class WorksController < ApplicationController
      end
   end
 
+  def show
+    # @comment = Comment.new
+    # @comments = @work.comments
+  end
+
   private
 
   def work_params

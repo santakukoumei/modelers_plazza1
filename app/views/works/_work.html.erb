@@ -1,7 +1,7 @@
 <div class="card">
-  <%= link_to image_tag(work.image, class: :card__img ), root_path %>
+  <%= link_to image_tag(work.image, class: :card__img ), work_path(work) %>
   <div class="card__body">
-    <%= link_to work.title, root_path, class: :card__title %>
+    <%= link_to work.title, work_path(work), class: :card__title %>
     <p class="card__summary">
       <%= work.category.genre %>
     </p>
