@@ -24,6 +24,16 @@ class WorksController < ApplicationController
     # @comments = @work.comments
   end
 
+  def edit
+  end
+
+  def update
+    if @work.update(work_params)
+     redirect_to work_path(@work)
+    else
+     render :edit
+    end
+  end
   private
 
   def work_params
