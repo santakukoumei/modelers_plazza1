@@ -34,6 +34,15 @@ class WorksController < ApplicationController
      render :edit
     end
   end
+
+  def destroy
+    if @work.destroy
+      redirect_to root_path
+    else
+      redirect_to root_path
+    end
+  end
+  
   private
 
   def work_params

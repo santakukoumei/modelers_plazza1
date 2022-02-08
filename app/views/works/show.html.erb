@@ -8,7 +8,7 @@
       <% if current_user == @work.user%>
         <div class="work__manage">
           <%= link_to "編集する", edit_work_path(@work), class: :work__btn %>
-          <%= link_to "削除する", root_path, class: :work__btn %>
+          <%= link_to "削除する", work_path(@work), method: :delete, class: :work__btn %>
         </div>
       <% end %>
       <div class="work__image">
