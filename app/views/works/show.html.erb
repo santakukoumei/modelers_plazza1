@@ -7,7 +7,7 @@
       <%= link_to "by #{@work.user.name}さんの作品", work_path, class: :work__user %>
       <% if current_user == @work.user%>
         <div class="work__manage">
-          <%= link_to "編集する", root_path, class: :work__btn %>
+          <%= link_to "編集する", edit_work_path(@work), class: :work__btn %>
           <%= link_to "削除する", root_path, class: :work__btn %>
         </div>
       <% end %>
