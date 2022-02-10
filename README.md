@@ -52,9 +52,16 @@ Pass/1234
 4-6-2.質問欄をクリックすると、質問内容詳細と回答入力フォームに遷移する
 4-6-3.回答内容を入力し「回答」を押すと回答内容が保存される。
 
+# 実装した機能
+作品投稿機能
+[![Image from Gyazo](https://i.gyazo.com/bf06bb090990b27382118f504022bf7a.gif)](https://gyazo.com/bf06bb090990b27382118f504022bf7a)
+
+作品詳細機能
+[![Image from Gyazo](https://i.gyazo.com/ebe697ad7f122a5d8e16fd530dd9dbd9.gif)](https://gyazo.com/ebe697ad7f122a5d8e16fd530dd9dbd9)
+
 # DB 設計
 ER図
-https://gyazo.com/a02f18494a668208d36019d648cbc3ca
+[![Image from Gyazo](https://i.gyazo.com/a02f18494a668208d36019d648cbc3ca.gif)](https://gyazo.com/a02f18494a668208d36019d648cbc3ca)
 
 # 実装予定の機能
 Q&A欄 作品製作での技術的な質問と回答ができる。
