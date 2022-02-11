@@ -5,6 +5,6 @@
     <p class="card__summary">
       <%= work.category.genre %>
     </p>
-    <%= link_to "by #{work.user.name}", root_path, class: :card__user %>
+    <%= link_to "by #{work.user.name}", user_path(work.user), class: :card__user %>
   </div>
 </div>
