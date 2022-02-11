@@ -20,8 +20,8 @@ class WorksController < ApplicationController
   end
 
   def show
-    # @comment = Comment.new
-    # @comments = @work.comments
+     @comment = Comment.new
+     @comments = @work.comments
   end
 
   def edit
