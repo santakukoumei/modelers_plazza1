@@ -27,11 +27,9 @@
             <%= @work.concept %>
           </p>
           <p class="detail__title">作品説明</p>
-          <%# <div class="detail__explanation_text"> %>
-            <p class="detail__explanation">
-              <%= @work.explanation %>
-            </p>
-          <%# </div> %>
+          <p class="detail__explanation">
+              _<%= @work.explanation %>
+          </p>
         </div>
       </div>
       <div class="work__comments">
@@ -50,7 +48,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content%>
-              <%= link_to "（#{comment.user.name}）", user_path(current_user), class: :comment_user %>
+              <%= link_to "（#{comment.user.name}）", user_path(comment.user), class: :comment_user %>
             </li>
           <% end %>
         </ul>
