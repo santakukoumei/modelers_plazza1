@@ -1,6 +1,7 @@
 class WorksController < ApplicationController
   before_action :set_work, except: [:index, :new, :create]
-  
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :contributor_confirmation, only: [:edit, :update, :destroy]
 
   def index
     @works = Work.includes(:user)
@@ -51,5 +52,11 @@ class WorksController < ApplicationController
 
   def set_work
     @work = Work.find(params[:id])
+  end
+
+  def contributor_confirmation
+    unless current_user == @work.user
+      redirect_to root_path 
+    end
   end
 end

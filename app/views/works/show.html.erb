@@ -4,7 +4,7 @@
       <p class="work_hedding">
         <%= @work.title %>
       </p>
-      <%= link_to "by #{@work.user.name}さんの作品", work_path, class: :work__user %>
+      <%= link_to "by #{@work.user.name}さんの作品", user_path(@work.user), class: :work__user %>
       <% if current_user == @work.user%>
         <div class="work__manage">
           <%= link_to "編集する", edit_work_path(@work), class: :work__btn %>
@@ -50,7 +50,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content%>
-              <%= link_to "（#{comment.user.name}）", root_path, class: :comment_user %>
+              <%= link_to "（#{comment.user.name}）", user_path(current_user), class: :comment_user %>
             </li>
           <% end %>
         </ul>
